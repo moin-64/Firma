@@ -177,6 +177,102 @@ src/accounting/AccountingService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.s
 .PHONY : src/accounting/AccountingService.cpp.s
 
+src/core/ConfigService.o: src/core/ConfigService.cpp.o
+.PHONY : src/core/ConfigService.o
+
+# target to build an object file
+src/core/ConfigService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o
+.PHONY : src/core/ConfigService.cpp.o
+
+src/core/ConfigService.i: src/core/ConfigService.cpp.i
+.PHONY : src/core/ConfigService.i
+
+# target to preprocess a source file
+src/core/ConfigService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.i
+.PHONY : src/core/ConfigService.cpp.i
+
+src/core/ConfigService.s: src/core/ConfigService.cpp.s
+.PHONY : src/core/ConfigService.s
+
+# target to generate assembly for a file
+src/core/ConfigService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.s
+.PHONY : src/core/ConfigService.cpp.s
+
+src/core/DatabaseService.o: src/core/DatabaseService.cpp.o
+.PHONY : src/core/DatabaseService.o
+
+# target to build an object file
+src/core/DatabaseService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o
+.PHONY : src/core/DatabaseService.cpp.o
+
+src/core/DatabaseService.i: src/core/DatabaseService.cpp.i
+.PHONY : src/core/DatabaseService.i
+
+# target to preprocess a source file
+src/core/DatabaseService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.i
+.PHONY : src/core/DatabaseService.cpp.i
+
+src/core/DatabaseService.s: src/core/DatabaseService.cpp.s
+.PHONY : src/core/DatabaseService.s
+
+# target to generate assembly for a file
+src/core/DatabaseService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.s
+.PHONY : src/core/DatabaseService.cpp.s
+
+src/core/Logger.o: src/core/Logger.cpp.o
+.PHONY : src/core/Logger.o
+
+# target to build an object file
+src/core/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o
+.PHONY : src/core/Logger.cpp.o
+
+src/core/Logger.i: src/core/Logger.cpp.i
+.PHONY : src/core/Logger.i
+
+# target to preprocess a source file
+src/core/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.i
+.PHONY : src/core/Logger.cpp.i
+
+src/core/Logger.s: src/core/Logger.cpp.s
+.PHONY : src/core/Logger.s
+
+# target to generate assembly for a file
+src/core/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.s
+.PHONY : src/core/Logger.cpp.s
+
+src/core/PKIService.o: src/core/PKIService.cpp.o
+.PHONY : src/core/PKIService.o
+
+# target to build an object file
+src/core/PKIService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o
+.PHONY : src/core/PKIService.cpp.o
+
+src/core/PKIService.i: src/core/PKIService.cpp.i
+.PHONY : src/core/PKIService.i
+
+# target to preprocess a source file
+src/core/PKIService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.i
+.PHONY : src/core/PKIService.cpp.i
+
+src/core/PKIService.s: src/core/PKIService.cpp.s
+.PHONY : src/core/PKIService.s
+
+# target to generate assembly for a file
+src/core/PKIService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnterpriseOS.dir/build.make CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.s
+.PHONY : src/core/PKIService.cpp.s
+
 src/deployment/DeploymentService.o: src/deployment/DeploymentService.cpp.o
 .PHONY : src/deployment/DeploymentService.o
 
@@ -432,6 +528,18 @@ help:
 	@echo "... src/accounting/AccountingService.o"
 	@echo "... src/accounting/AccountingService.i"
 	@echo "... src/accounting/AccountingService.s"
+	@echo "... src/core/ConfigService.o"
+	@echo "... src/core/ConfigService.i"
+	@echo "... src/core/ConfigService.s"
+	@echo "... src/core/DatabaseService.o"
+	@echo "... src/core/DatabaseService.i"
+	@echo "... src/core/DatabaseService.s"
+	@echo "... src/core/Logger.o"
+	@echo "... src/core/Logger.i"
+	@echo "... src/core/Logger.s"
+	@echo "... src/core/PKIService.o"
+	@echo "... src/core/PKIService.i"
+	@echo "... src/core/PKIService.s"
 	@echo "... src/deployment/DeploymentService.o"
 	@echo "... src/deployment/DeploymentService.i"
 	@echo "... src/deployment/DeploymentService.s"

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "../core/DatabaseService.h"
 
 struct Device {
     std::string deviceId;
@@ -13,16 +14,16 @@ struct Device {
 
 class DeviceService {
 public:
-    DeviceService();
+    DeviceService(DatabaseService* dbService);
     ~DeviceService();
 
     bool addDevice(const std::string& deviceId, const std::string& deviceType);
     bool removeDevice(const std::string& deviceId);
     bool assignDeviceToUser(const std::string& deviceId, const std::string& username);
-    const std::map<std::string, Device>& getDevices() const;
+    std::vector<Device> getDevices() const;
 
 private:
-    std::map<std::string, Device> devices;
+    DatabaseService* dbService;
 };
 
 #endif // DEVICE_SERVICE_H

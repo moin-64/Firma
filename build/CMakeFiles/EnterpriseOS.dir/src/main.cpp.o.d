@@ -349,12 +349,25 @@ CMakeFiles/EnterpriseOS.dir/src/main.cpp.o: /app/src/main.cpp \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /usr/include/c++/13/any /app/src/identity/IdentityService.h \
- /app/src/device/DeviceService.h /app/src/deployment/DeploymentService.h \
+ /usr/include/c++/13/any /app/src/core/Logger.h \
+ /usr/include/c++/13/fstream \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /app/src/core/ConfigService.h \
+ /app/src/core/DatabaseService.h /usr/include/postgresql/libpq-fe.h \
+ /usr/include/postgresql/postgres_ext.h \
+ /usr/include/postgresql/pg_config_ext.h /app/src/core/PKIService.h \
+ /app/src/identity/IdentityService.h \
+ /app/src/identity/../core/DatabaseService.h \
+ /app/src/device/DeviceService.h \
+ /app/src/device/../core/DatabaseService.h \
+ /app/src/deployment/DeploymentService.h \
  /app/src/deployment/../identity/IdentityService.h \
  /app/src/deployment/../device/DeviceService.h \
  /app/src/access/AccessService.h /app/src/security/SecurityService.h \
- /app/src/messaging/MessagingService.h /app/src/hr/HRService.h \
+ /app/src/messaging/MessagingService.h /app/include/zmq.hpp \
+ /usr/include/zmq.h /usr/include/c++/13/chrono \
+ /usr/include/c++/13/optional /app/src/hr/HRService.h \
  /app/src/accounting/AccountingService.h \
  /app/src/ticketing/TicketingService.h \
  /app/src/file_management/FileManagementService.h \
