@@ -1,1 +1,79 @@
-<html><body><h1>Admin Dashboard</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <h2>Create User</h2>
+    <form id="createUserForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role"><br><br>
+        <input type="submit" value="Create User">
+    </form>
+
+    <h2>Register Device</h2>
+    <form id="registerDeviceForm">
+        <label for="deviceId">Device ID:</label>
+        <input type="text" id="deviceId" name="deviceId"><br><br>
+        <label for="deviceType">Device Type:</label>
+        <input type="text" id="deviceType" name="deviceType"><br><br>
+        <label for="assignedUser">Assigned User:</label>
+        <input type="text" id="assignedUser" name="assignedUser"><br><br>
+        <input type="submit" value="Register Device">
+    </form>
+
+    <h2>Deploy OS</h2>
+    <form id="deployOsForm">
+        <label for="deployDeviceId">Device ID:</label>
+        <input type="text" id="deployDeviceId" name="deployDeviceId"><br><br>
+        <input type="submit" value="Deploy OS">
+    </form>
+
+    <script>
+        document.getElementById('createUserForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            fetch('/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+        });
+
+        document.getElementById('registerDeviceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            fetch('/api/devices', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+        });
+
+        document.getElementById('deployOsForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            fetch('/api/deploy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ deviceId: data.deployDeviceId }),
+            });
+        });
+    </script>
+</body>
+</html>
