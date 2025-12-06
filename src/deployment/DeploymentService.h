@@ -2,17 +2,19 @@
 #define DEPLOYMENT_SERVICE_H
 
 #include <string>
+#include "../identity/IdentityService.h"
+#include "../device/DeviceService.h"
 
 class DeploymentService {
 public:
-    DeploymentService();
+    DeploymentService(const IdentityService& identityService, const DeviceService& deviceService);
     ~DeploymentService();
 
-    bool deployImage(const std::string& deviceId, const std::string& imageId);
-    bool updateImage(const std::string& deviceId, const std::string& imageId);
+    bool deployImage(const std::string& deviceId);
 
 private:
-    // Private members
+    const IdentityService& identityService;
+    const DeviceService& deviceService;
 };
 
 #endif // DEPLOYMENT_SERVICE_H

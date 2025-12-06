@@ -1,24 +1,35 @@
 #include "IdentityService.h"
 
 IdentityService::IdentityService() {
-    // Initialize database connection
 }
 
 IdentityService::~IdentityService() {
-    // Close database connection
 }
 
 bool IdentityService::addUser(const std::string& username, const std::string& password) {
-    // Placeholder for adding a user to the database
+    if (users.find(username) != users.end()) {
+        return false; // User already exists
+    }
+    users[username] = {username, password, ""};
     return true;
 }
 
 bool IdentityService::removeUser(const std::string& username) {
-    // Placeholder for removing a user from the database
+    if (users.find(username) == users.end()) {
+        return false; // User not found
+    }
+    users.erase(username);
     return true;
 }
 
 bool IdentityService::assignRole(const std::string& username, const std::string& role) {
-    // Placeholder for assigning a role to a user
+    if (users.find(username) == users.end()) {
+        return false; // User not found
+    }
+    users[username].role = role;
     return true;
+}
+
+const std::map<std::string, User>& IdentityService::getUsers() const {
+    return users;
 }

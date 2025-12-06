@@ -3,6 +3,13 @@
 
 #include <string>
 #include <vector>
+#include <map>
+
+struct Device {
+    std::string deviceId;
+    std::string deviceType;
+    std::string assignedUser;
+};
 
 class DeviceService {
 public:
@@ -12,9 +19,10 @@ public:
     bool addDevice(const std::string& deviceId, const std::string& deviceType);
     bool removeDevice(const std::string& deviceId);
     bool assignDeviceToUser(const std::string& deviceId, const std::string& username);
+    const std::map<std::string, Device>& getDevices() const;
 
 private:
-    // Database connection and other private members
+    std::map<std::string, Device> devices;
 };
 
 #endif // DEVICE_SERVICE_H
