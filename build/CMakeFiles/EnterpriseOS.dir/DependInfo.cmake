@@ -10,6 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/app/src/access/AccessService.cpp" "CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o.d"
   "/app/src/accounting/AccountingService.cpp" "CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o.d"
+  "/app/src/core/ConfigService.cpp" "CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o.d"
+  "/app/src/core/DatabaseService.cpp" "CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o.d"
+  "/app/src/core/Logger.cpp" "CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o.d"
+  "/app/src/core/PKIService.cpp" "CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o.d"
   "/app/src/deployment/DeploymentService.cpp" "CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o.d"
   "/app/src/device/DeviceService.cpp" "CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o.d"
   "/app/src/file_management/FileManagementService.cpp" "CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o" "gcc" "CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o.d"

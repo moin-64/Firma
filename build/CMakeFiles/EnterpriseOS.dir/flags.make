@@ -4,6 +4,6 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES =
 
-CXX_INCLUDES = -I/app/include
+CXX_INCLUDES = -I/app/include -I/app/src -I/usr/include/pgm-5.3 -I/usr/include/libxml2 -I/usr/include/postgresql
 
 CXX_FLAGS = -std=gnu++17

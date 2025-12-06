@@ -83,10 +83,66 @@ CMakeFiles/EnterpriseOS.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EnterpriseOS.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/src/main.cpp -o CMakeFiles/EnterpriseOS.dir/src/main.cpp.s
 
+CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
+CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o: /app/src/core/Logger.cpp
+CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o -c /app/src/core/Logger.cpp
+
+CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/src/core/Logger.cpp > CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.i
+
+CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/src/core/Logger.cpp -o CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.s
+
+CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
+CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o: /app/src/core/ConfigService.cpp
+CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o -c /app/src/core/ConfigService.cpp
+
+CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/src/core/ConfigService.cpp > CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.i
+
+CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/src/core/ConfigService.cpp -o CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.s
+
+CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
+CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o: /app/src/core/DatabaseService.cpp
+CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o -c /app/src/core/DatabaseService.cpp
+
+CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/src/core/DatabaseService.cpp > CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.i
+
+CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/src/core/DatabaseService.cpp -o CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.s
+
+CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
+CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o: /app/src/core/PKIService.cpp
+CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o -c /app/src/core/PKIService.cpp
+
+CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/src/core/PKIService.cpp > CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.i
+
+CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/src/core/PKIService.cpp -o CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.s
+
 CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o: /app/src/identity/IdentityService.cpp
 CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o -c /app/src/identity/IdentityService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.i: cmake_force
@@ -100,7 +156,7 @@ CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o: /app/src/device/DeviceService.cpp
 CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o -c /app/src/device/DeviceService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.i: cmake_force
@@ -114,7 +170,7 @@ CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o: /app/src/deployment/DeploymentService.cpp
 CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o -c /app/src/deployment/DeploymentService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.i: cmake_force
@@ -128,7 +184,7 @@ CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o: /app/src/access/AccessService.cpp
 CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.o -c /app/src/access/AccessService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.i: cmake_force
@@ -142,7 +198,7 @@ CMakeFiles/EnterpriseOS.dir/src/access/AccessService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o: /app/src/security/SecurityService.cpp
 CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.o -c /app/src/security/SecurityService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.i: cmake_force
@@ -156,7 +212,7 @@ CMakeFiles/EnterpriseOS.dir/src/security/SecurityService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o: /app/src/messaging/MessagingService.cpp
 CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.o -c /app/src/messaging/MessagingService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.i: cmake_force
@@ -170,7 +226,7 @@ CMakeFiles/EnterpriseOS.dir/src/messaging/MessagingService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o: /app/src/hr/HRService.cpp
 CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.o -c /app/src/hr/HRService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.i: cmake_force
@@ -184,7 +240,7 @@ CMakeFiles/EnterpriseOS.dir/src/hr/HRService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o: /app/src/accounting/AccountingService.cpp
 CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.o -c /app/src/accounting/AccountingService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.i: cmake_force
@@ -198,7 +254,7 @@ CMakeFiles/EnterpriseOS.dir/src/accounting/AccountingService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o: /app/src/ticketing/TicketingService.cpp
 CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.o -c /app/src/ticketing/TicketingService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.i: cmake_force
@@ -212,7 +268,7 @@ CMakeFiles/EnterpriseOS.dir/src/ticketing/TicketingService.cpp.s: cmake_force
 CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o: /app/src/file_management/FileManagementService.cpp
 CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.o -c /app/src/file_management/FileManagementService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.i: cmake_force
@@ -226,7 +282,7 @@ CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementService.cpp.s: cma
 CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o: CMakeFiles/EnterpriseOS.dir/flags.make
 CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o: /app/src/monitoring/MonitoringService.cpp
 CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o: CMakeFiles/EnterpriseOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o -MF CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o.d -o CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o -c /app/src/monitoring/MonitoringService.cpp
 
 CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.i: cmake_force
@@ -240,6 +296,10 @@ CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.s: cmake_force
 # Object files for target EnterpriseOS
 EnterpriseOS_OBJECTS = \
 "CMakeFiles/EnterpriseOS.dir/src/main.cpp.o" \
+"CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o" \
+"CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o" \
+"CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o" \
+"CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o" \
 "CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o" \
 "CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o" \
 "CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o" \
@@ -256,6 +316,10 @@ EnterpriseOS_OBJECTS = \
 EnterpriseOS_EXTERNAL_OBJECTS =
 
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/main.cpp.o
+EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/core/Logger.cpp.o
+EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/core/ConfigService.cpp.o
+EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/core/DatabaseService.cpp.o
+EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/core/PKIService.cpp.o
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/identity/IdentityService.cpp.o
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/device/DeviceService.cpp.o
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/deployment/DeploymentService.cpp.o
@@ -269,7 +333,7 @@ EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/file_management/FileManagementServ
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/src/monitoring/MonitoringService.cpp.o
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/build.make
 EnterpriseOS: CMakeFiles/EnterpriseOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable EnterpriseOS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable EnterpriseOS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EnterpriseOS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

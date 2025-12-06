@@ -198,6 +198,18 @@ EnterpriseOS_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 EnterpriseOS_SOURCE_DIR:STATIC=/app
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//Path to a library.
+pkgcfg_lib_PQ_pq:FILEPATH=/usr/lib/x86_64-linux-gnu/libpq.so
+
+//Path to a library.
+pkgcfg_lib_ZMQ_zmq:FILEPATH=/usr/lib/x86_64-linux-gnu/libzmq.so
+
 
 ########################
 # INTERNAL cache entries
@@ -332,5 +344,94 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+PQ_CFLAGS:INTERNAL=-I/usr/include/postgresql;-I/usr/include
+PQ_CFLAGS_I:INTERNAL=
+PQ_CFLAGS_OTHER:INTERNAL=
+PQ_FOUND:INTERNAL=1
+PQ_INCLUDEDIR:INTERNAL=/usr/include/postgresql
+PQ_INCLUDE_DIRS:INTERNAL=/usr/include/postgresql;/usr/include
+PQ_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lpq
+PQ_LDFLAGS_OTHER:INTERNAL=
+PQ_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PQ_LIBRARIES:INTERNAL=pq
+PQ_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PQ_LIBS:INTERNAL=
+PQ_LIBS_L:INTERNAL=
+PQ_LIBS_OTHER:INTERNAL=
+PQ_LIBS_PATHS:INTERNAL=
+PQ_MODULE_NAME:INTERNAL=libpq
+PQ_PREFIX:INTERNAL=/usr
+PQ_STATIC_CFLAGS:INTERNAL=-I/usr/include/postgresql;-I/usr/include
+PQ_STATIC_CFLAGS_I:INTERNAL=
+PQ_STATIC_CFLAGS_OTHER:INTERNAL=
+PQ_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/postgresql;/usr/include
+PQ_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lpq;-lpgcommon;-lpgport;-lssl;-lgssapi_krb5;-lm;-lldap;-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-ldl;-pthread;-lcrypto;-ldl;-pthread
+PQ_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
+PQ_STATIC_LIBDIR:INTERNAL=
+PQ_STATIC_LIBRARIES:INTERNAL=pq;pgcommon;pgport;ssl;gssapi_krb5;m;ldap;ssl;dl;crypto;dl
+PQ_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu
+PQ_STATIC_LIBS:INTERNAL=
+PQ_STATIC_LIBS_L:INTERNAL=
+PQ_STATIC_LIBS_OTHER:INTERNAL=
+PQ_STATIC_LIBS_PATHS:INTERNAL=
+PQ_VERSION:INTERNAL=16.11
+PQ_libpq_INCLUDEDIR:INTERNAL=
+PQ_libpq_LIBDIR:INTERNAL=
+PQ_libpq_PREFIX:INTERNAL=
+PQ_libpq_VERSION:INTERNAL=
+ZMQ_CFLAGS:INTERNAL=-I/usr/include;-isystem;/usr/include/mit-krb5;-I/usr/include/pgm-5.3;-I/usr/include/libxml2;-I/usr/include/x86_64-linux-gnu
+ZMQ_CFLAGS_I:INTERNAL=
+ZMQ_CFLAGS_OTHER:INTERNAL=-isystem;/usr/include/mit-krb5
+ZMQ_FOUND:INTERNAL=1
+ZMQ_INCLUDEDIR:INTERNAL=/usr/include
+ZMQ_INCLUDE_DIRS:INTERNAL=/usr/include;/usr/include/pgm-5.3;/usr/include/libxml2;/usr/include/x86_64-linux-gnu
+ZMQ_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lzmq
+ZMQ_LDFLAGS_OTHER:INTERNAL=
+ZMQ_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+ZMQ_LIBRARIES:INTERNAL=zmq
+ZMQ_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+ZMQ_LIBS:INTERNAL=
+ZMQ_LIBS_L:INTERNAL=
+ZMQ_LIBS_OTHER:INTERNAL=
+ZMQ_LIBS_PATHS:INTERNAL=
+ZMQ_MODULE_NAME:INTERNAL=libzmq
+ZMQ_PREFIX:INTERNAL=/usr
+ZMQ_STATIC_CFLAGS:INTERNAL=-I/usr/include;-isystem;/usr/include/mit-krb5;-I/usr/include/pgm-5.3;-I/usr/include/libxml2;-I/usr/include/x86_64-linux-gnu
+ZMQ_STATIC_CFLAGS_I:INTERNAL=
+ZMQ_STATIC_CFLAGS_OTHER:INTERNAL=-isystem;/usr/include/mit-krb5
+ZMQ_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include;/usr/include/pgm-5.3;/usr/include/libxml2;/usr/include/x86_64-linux-gnu
+ZMQ_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lzmq;-lstdc++;-lpthread;-lrt;-L/usr/lib/x86_64-linux-gnu/mit-krb5;-lgssapi_krb5;-L/usr/lib/x86_64-linux-gnu/mit-krb5;-lkrb5;-lk5crypto;-lcom_err;-lkrb5support;-lsodium;-pthread;-lpgm;-lm;-lnorm;libprotokit.a;-L/usr/lib/x86_64-linux-gnu;-lxml2;-licui18n;-licuuc;-licudata;-lz;-llzma;-lm;-lbsd;-lmd
+ZMQ_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;libprotokit.a
+ZMQ_STATIC_LIBDIR:INTERNAL=
+ZMQ_STATIC_LIBRARIES:INTERNAL=zmq;stdc++;pthread;rt;gssapi_krb5;krb5;k5crypto;com_err;krb5support;sodium;pgm;m;norm;xml2;icui18n;icuuc;icudata;z;lzma;m;bsd;md
+ZMQ_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu/mit-krb5;/usr/lib/x86_64-linux-gnu/mit-krb5;/usr/lib/x86_64-linux-gnu
+ZMQ_STATIC_LIBS:INTERNAL=
+ZMQ_STATIC_LIBS_L:INTERNAL=
+ZMQ_STATIC_LIBS_OTHER:INTERNAL=
+ZMQ_STATIC_LIBS_PATHS:INTERNAL=
+ZMQ_VERSION:INTERNAL=4.3.5
+ZMQ_libzmq_INCLUDEDIR:INTERNAL=
+ZMQ_libzmq_LIBDIR:INTERNAL=
+ZMQ_libzmq_PREFIX:INTERNAL=
+ZMQ_libzmq_VERSION:INTERNAL=
+ZMQ_libzmqpp_INCLUDEDIR:INTERNAL=
+ZMQ_libzmqpp_LIBDIR:INTERNAL=
+ZMQ_libzmqpp_PREFIX:INTERNAL=
+ZMQ_libzmqpp_VERSION:INTERNAL=
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_arguments_PQ:INTERNAL=REQUIRED;libpq
+__pkg_config_arguments_ZMQ:INTERNAL=REQUIRED;libzmq
+__pkg_config_checked_PQ:INTERNAL=1
+__pkg_config_checked_ZMQ:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PQ_pq
+pkgcfg_lib_PQ_pq-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_ZMQ_zmq
+pkgcfg_lib_ZMQ_zmq-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu

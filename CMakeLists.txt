@@ -5,15 +5,20 @@ project(EnterpriseOS CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include)
+include_directories(include src)
 
-# Add ZeroMQ include directories and libraries
-# find_package(ZeroMQ REQUIRED)
-# include_directories(${ZeroMQ_INCLUDE_DIRS})
-# link_libraries(${ZeroMQ_LIBRARIES})
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(ZMQ REQUIRED libzmq)
+pkg_check_modules(PQ REQUIRED libpq)
+
+include_directories(${ZMQ_INCLUDE_DIRS} ${PQ_INCLUDE_DIRS})
 
 add_executable(EnterpriseOS
     src/main.cpp
+    src/core/Logger.cpp
+    src/core/ConfigService.cpp
+    src/core/DatabaseService.cpp
+    src/core/PKIService.cpp
     src/identity/IdentityService.cpp
     src/device/DeviceService.cpp
     src/deployment/DeploymentService.cpp
@@ -27,4 +32,4 @@ add_executable(EnterpriseOS
     src/monitoring/MonitoringService.cpp
 )
 
-target_link_libraries(EnterpriseOS pthread)
+target_link_libraries(EnterpriseOS pthread ${ZMQ_LIBRARIES} ${PQ_LIBRARIES})

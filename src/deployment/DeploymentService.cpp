@@ -1,5 +1,6 @@
 #include "DeploymentService.h"
 #include <iostream>
+#include <algorithm>
 
 DeploymentService::DeploymentService(const IdentityService& identityService, const DeviceService& deviceService)
     : identityService(identityService), deviceService(deviceService) {
@@ -10,19 +11,27 @@ DeploymentService::~DeploymentService() {
 
 bool DeploymentService::deployImage(const std::string& deviceId) {
     const auto& devices = deviceService.getDevices();
-    if (devices.find(deviceId) == devices.end()) {
+    auto device_it = std::find_if(devices.begin(), devices.end(), [&](const Device& d) {
+        return d.deviceId == deviceId;
+    });
+
+    if (device_it == devices.end()) {
         std::cerr << "Deployment failed: Device not found." << std::endl;
         return false;
     }
 
-    const auto& device = devices.at(deviceId);
+    const auto& device = *device_it;
     const auto& users = identityService.getUsers();
-    if (users.find(device.assignedUser) == users.end()) {
+    auto user_it = std::find_if(users.begin(), users.end(), [&](const User& u) {
+        return u.username == device.assignedUser;
+    });
+
+    if (user_it == users.end()) {
         std::cerr << "Deployment failed: Assigned user not found." << std::endl;
         return false;
     }
 
-    const auto& user = users.at(device.assignedUser);
+    const auto& user = *user_it;
 
     std::cout << "Starting deployment for device: " << device.deviceId << std::endl;
     std::cout << "  User: " << user.username << std::endl;
