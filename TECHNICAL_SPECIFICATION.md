@@ -5,11 +5,14 @@ This document outlines the technical specification for a fully integrated, AI-po
 
 ## 2. System Architecture
 ### 2.1. Macro Architecture
+The system is built on a modular, service-oriented architecture, with a central "Core" server that orchestrates all operations. The Core is composed of several independent but interconnected modules, each responsible for a specific domain.
+
 - **Central Server Unit ("Core"):**
-    - **CPU:** 32+ Cores
-    - **RAM:** 128-512 GB
-    - **Storage:** RAID-10 SSD array for high availability and performance.
-    - **Power:** Redundant Power Supplies
+    - **Hardware:**
+        - **CPU:** 32+ Cores
+        - **RAM:** 128-512 GB
+        - **Storage:** RAID-10 SSD array for high availability and performance.
+        - **Power:** Redundant Power Supplies
     - **Network:** Dedicated management network, plus VLANs for each department.
     - **OS:** Custom Linux distribution with a C++ backend.
 - **Server Modules:**
@@ -27,64 +30,130 @@ This document outlines the technical specification for a fully integrated, AI-po
     - **AI Core:** Provides machine learning models for behavior analysis and risk assessment.
     - **Dashboard Core:** Renders the web-based UIs for different roles.
 
-### 2.2. Micro Architecture
-Each module will be a self-contained service with a C++ backend, a RESTful API over HTTPS, a dedicated database schema, asynchronous worker processes, event handlers, and RBAC logic. Communication between modules will be handled by a ZeroMQ message bus.
+### 2.2. Micro Architecture & Communication
+Each module is a self-contained C++ service with a RESTful API over HTTPS for external communication and a ZeroMQ-based message bus for internal, asynchronous communication. This ensures loose coupling and high scalability.
 
-## 3. Role-Based Access Control (RBAC)
-(A detailed RBAC matrix will be implemented based on the following rules)
-- **Executive & Management:** Read-only access to department data, no operational admin rights.
-- **Administration & Organization:** Access to organizational tools, no sensitive HR or finance data.
-- **Human Resources:** Full access to employee data, but no financial accounting data. Payroll has the highest security.
-- **Finance & Controlling:** Full access to financial data, but no HR data.
-- **Procurement:** Access to supplier and contract data, no finance data beyond procurement.
-- **Production & Engineering:** Access to technical data and production dashboards only.
-- **Research & Development:** Access to R&D projects and data, isolated from other departments.
-- **Sales & Distribution:** Access to CRM and customer data, no finance or HR data.
-- **Marketing & Communications:** Access to marketing tools and public-facing content, isolated from internal data.
-- **IT & Digitalization:** High-level access to technical systems, but no access to personal user content.
-- **Customer Service:** Access to customer support tools and relevant customer data.
-- **Logistics & Transport:** Access to logistics and warehouse management systems.
-- **Legal & Compliance:** Access to legal documents and audit logs (read-only for DPO).
-- **Facility Management:** Access to building management systems and security feeds.
+- **Module Components:**
+    - C++ Backend Service
+    - RESTful API (HTTPS) & ZeroMQ Pub/Sub Sockets
+    - Dedicated Database Schema
+    - Asynchronous Worker Processes
+    - Event Handlers
+    - RBAC Logic
 
-## 4. Face Recognition & Physical Access
-- **Terminal Hardware:** ARM CPU, Secure Element, HD camera with IR and depth sensors, NFC reader, TPM chip, and an edge AI accelerator.
-- **Authentication Flow:** The system will use liveness detection, 3D depth mapping, and tailgating detection. NFC tokens will be used as a fallback for HR and emergencies.
-- **Security:** Terminals will lock after 5 failed attempts, camera obstruction, or tampering.
+- **Communication Protocols:**
+    - **External:** All external communication with the system (e.g., from the web dashboard) will be done via the REST API over HTTPS. All API endpoints will require a valid session token for authentication.
+    - **Internal:** Internal communication between modules will be done via a ZeroMQ message bus. This will be used for asynchronous tasks such as triggering a deployment or notifying the security module of a potential threat. All messages on the bus will be signed and encrypted.
 
-## 5. OS Provisioning & Deployment
-- **Automated Installation:** A network-boot (PXE/iPXE) process will install a role-specific Linux distribution on workstations. The image will be generated on-the-fly with the correct kernel, packages, certificates, firewall rules, and user credentials.
-- **Admin Bridge:** Administrators can use their own workstations to flash other systems.
-- **Security:** All boot images will be signed, and the system will support rollback via snapshots.
+## 3. Database Schema
+This section defines the PostgreSQL database schema.
 
-## 6. Security & Monitoring
-- **AI-Driven Anomaly Detection:** The system will monitor for unusual access patterns, network traffic, file operations, and hardware failures.
-- **Automated Responses:** The system will automatically reconfigure firewalls, lock accounts, lock doors, create tickets, and alert security and management in response to threats.
-- **Logging and Compliance:** All logs will be retained for 5 years and then automatically deleted. The system will be GDPR and GoBD compliant.
+### 3.1. Identity & Access Management
+- **users**
+    - `id` (UUID, PK)
+    - `username` (VARCHAR, UNIQUE)
+    - `password_hash` (VARCHAR)
+    - `role_id` (UUID, FK to roles.id)
+    - `face_vector` (BYTEA)
+    - `nfc_token` (VARCHAR, UNIQUE)
+    - `created_at` (TIMESTAMPTZ)
+    - `updated_at` (TIMESTAMPTZ)
+- **roles**
+    - `id` (UUID, PK)
+    - `name` (VARCHAR, UNIQUE)
+    - `hierarchy_level` (INTEGER)
+- **permissions**
+    - `id` (UUID, PK)
+    - `name` (VARCHAR, UNIQUE)
+- **role_permissions**
+    - `role_id` (UUID, FK to roles.id)
+    - `permission_id` (UUID, FK to permissions.id)
 
-## 7. Ticketing & Workflow Automation
-- **Ticket Management:** The system will include a custom ticketing module with AI-powered prioritization and solution suggestions, escalation rules, and role-specific visibility.
-- **Workflow Automation:** Workflows for onboarding, offboarding, and other business processes will be automated.
+### 3.2. Device Management
+- **devices**
+    - `id` (UUID, PK)
+    - `hostname` (VARCHAR, UNIQUE)
+    - `type` (VARCHAR) -- e.g., 'laptop', 'terminal', 'server'
+    - `assigned_user_id` (UUID, FK to users.id)
+    - `ip_address` (INET)
+    - `mac_address` (MACADDR, UNIQUE)
+    - `status` (VARCHAR) -- e.g., 'online', 'offline', 'decommissioned'
+    - `last_seen` (TIMESTAMPTZ)
 
-## 8. HR & Accounting Modules
-- **HR Module:** Digital contracts, vacation planning, training scheduling, and document archiving.
-- **Accounting Module:** Automated payroll, invoice processing (with OCR), tax-compliant archiving, and project cost tracking.
+### 3.3. Deployment
+- **os_images**
+    - `id` (UUID, PK)
+    - `name` (VARCHAR)
+    - `version` (VARCHAR)
+    - `role_id` (UUID, FK to roles.id)
+    - `file_path` (VARCHAR)
+- **deployment_jobs**
+    - `id` (UUID, PK)
+    - `device_id` (UUID, FK to devices.id)
+    - `os_image_id` (UUID, FK to os_images.id)
+    - `status` (VARCHAR) -- e.g., 'pending', 'in_progress', 'success', 'failed'
+    - `created_at` (TIMESTAMPTZ)
+    - `completed_at` (TIMESTAMPTZ)
 
-## 9. Document Management
-The system will provide versioning, automatic classification, access control, duplicate detection, and compliance checks for all documents.
+## 4. API Specification
+### 4.1. REST API (HTTPS)
+- **Authentication**
+    - `POST /api/auth/login` - Authenticate and receive a session token.
+    - `POST /api/auth/logout` - Invalidate a session token.
+- **Users**
+    - `GET /api/users` - List all users.
+    - `POST /api/users` - Create a new user.
+    - `GET /api/users/{id}` - Get user details.
+    - `PUT /api/users/{id}` - Update a user.
+    - `DELETE /api/users/{id}` - Delete a user.
+- **Devices**
+    - `GET /api/devices` - List all devices.
+    - `POST /api/devices` - Register a new device.
+    - `GET /api/devices/{id}` - Get device details.
+    - `PUT /api/devices/{id}` - Update a device.
+    - `DELETE /api/devices/{id}` - Decommission a device.
+- **Deployment**
+    - `POST /api/deploy` - Trigger an OS deployment to a device.
 
-## 10. Dashboards
-- **Admin Dashboard:** Live monitoring of cameras, doors, system load, and network status, plus controls for user and device management.
-- **Executive Dashboard:** High-level overview of financials, HR statistics, security trends, and other KPIs.
-- **Security Dashboard:** Real-time access logs, anomaly alerts, and incident response tools.
+### 4.2. ZeroMQ Message Bus (Internal)
+- **Topic: `deployment.jobs`**
+    - `{"action": "new", "job_id": "...", "device_id": "...", "image_id": "..."}`
+    - `{"action": "update", "job_id": "...", "status": "..."}`
+- **Topic: `security.events`**
+    - `{"event_type": "failed_login", "username": "...", "ip_address": "..."}`
+    - `{"event_type": "unauthorized_access", "user_id": "...", "resource": "..."}`
+- **Topic: `device.status`**
+    - `{"device_id": "...", "status": "online/offline", "timestamp": "..."}`
 
-## 11. Network Segmentation & Infrastructure
-- **VLANs:** Each department will have its own VLAN.
-- **Firewall:** Firewall rules will be applied on a per-role basis.
-- **IoT Security:** IoT devices will be isolated in a separate network segment.
-- **Redundancy:** The system will feature automatic failover and redundant backups at multiple physical sites.
+## 5. Security Architecture
+### 5.1. Public Key Infrastructure (PKI)
+An internal Certificate Authority (CA) will be established to issue and manage X.509 certificates for all services, devices, and users. This will ensure that all communication is authenticated and encrypted.
 
-## 12. Technology Stack
+### 5.2. Encryption
+- **Data at Rest:** All data will be encrypted at rest using LUKS 2 full-disk encryption.
+- **Data in Transit:** All data will be encrypted in transit using TLS 1.3.
+- **Sensitive Data:** Sensitive data, such as NFC tokens and face vectors, will be additionally encrypted at the application level using AES-256.
+
+### 5.3. Authentication Flow
+1.  **User Login:** Users will authenticate to their workstations using a combination of their password and face recognition.
+2.  **Session Token:** Upon successful authentication, the Identity Core will issue a short-lived JSON Web Token (JWT) to the user.
+3.  **API Requests:** All subsequent API requests must include the JWT in the `Authorization` header.
+4.  **Inter-Service Communication:** All messages on the ZeroMQ bus will be signed with the sending service's private key and encrypted with the recipient service's public key.
+
+## 6. Network Topology
+### 6.1. VLANs and Network Segmentation
+The network will be segmented into multiple VLANs to isolate traffic and improve security.
+- **Management VLAN:** For communication between the Core server and other infrastructure components.
+- **Deployment VLAN:** For OS provisioning and deployment.
+- **Departmental VLANs:** Each department (HR, Finance, etc.) will have its own VLAN.
+- **Guest VLAN:** For guest and IoT devices.
+
+### 6.2. Firewall Rules
+- **Default Deny:** All traffic between VLANs will be denied by default.
+- **Role-Based Access:** Firewall rules will be dynamically configured based on the user's role and the principle of least privilege.
+- **Deep Packet Inspection:** All traffic will be subject to deep packet inspection to detect and block malicious activity.
+
+## 7. Technology Stack
 - **Backend:** C/C++
 - **Server OS:** Custom Linux
 - **Message Bus:** ZeroMQ
