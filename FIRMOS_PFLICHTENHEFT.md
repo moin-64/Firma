@@ -5,7 +5,7 @@ Dieses Dokument definiert die vollständige technische Spezifikation für die Ko
 
 ## 2. Physische und Netzwerk-Infrastruktur
 ### 2.1. Hardware-Infrastruktur
-Das Fundament des FirmOS bildet ein zentrales Serverrack (42-HE-Schränke), das für maximale Rechenleistung, Redundanz und Ausfallsicherheit ausgelegt ist. Alle Komponenten sind für den Dauerbetrieb in einem Rechenzentrumsumfeld konzipiert.
+Das Fundament des FirmOS bildet ein zentrales Serverrack (42-HE-Schränke), das für maximale Leistung, Redundanz und Ausfallsicherheit ausgelegt ist. Alle Komponenten sind für den Dauerbetrieb in einem Rechenzentrumsumfeld konzipiert.
 - **Netzwerk-Backbone:** Das Kernnetzwerk wird durch Enterprise-Router und -Switches von Ubiquiti (UniFi-Serie oder äquivalent) realisiert. Es bietet 10/25/40/100-GbE-Verbindungen für High-Speed-Datenübertragung zwischen den Server-Komponenten. Redundante Glasfaser-Links zwischen den Core-Switches stellen die Ausfallsicherheit des Netzwerks sicher.
 - **Compute-Nodes:** Mehrere hochleistungsfähige Server-Nodes mit Multi-Core-CPUs (z.B. AMD EPYC oder Intel Xeon Scalable), mindestens 256 GB ECC-RAM und redundanten Netzteilen dienen der Ausführung der Kern-Microservices des FirmOS.
 - **GPU-Cluster:** Ein dedizierter Cluster, ausgestattet mit NVIDIA A100/H100 Tensor Core GPUs oder vergleichbaren Beschleunigern, ist für sämtliche KI- und Machine-Learning-Aufgaben zuständig. Die GPUs sind über NVLink oder eine äquivalente PCIe-Fabric-Technologie für maximale Bandbreite bei parallelen Rechenoperationen verbunden.
@@ -33,7 +33,7 @@ Eine unternehmensspezifisch gehärtete und optimierte Linux-Distribution, basier
 - **Identity & Access Management (IAM):** Eine gehärtete Instanz von Keycloak oder Authentik dient als zentrale Instanz für das gesamte Identity Management.
 - **Multi-Faktor-Authentifizierung (MFA):** Für alle Logins ist eine Kombination aus Passwort, Gesichtserkennung und optional einem Hardware-Token (FIDO2/WebAuthn) oder NFC-Token zwingend erforderlich.
 - **Protokolle:** Das System unterstützt moderne Authentifizierungs- und Autorisierungsprotokolle wie OAuth2, SAML und OpenID Connect (OIDC).
-- **Hierarchische Rechte:** Das Rechtesystem ist streng hierarchisch aufgebaut. Rechte werden von übergeordneten Rollen an untergeordnete vererbt. Administratoren können keine Rechte an Rollen vergeben, die ihrer eigenen Hierarchiestufe entsprechen oder darüber liegen.
+- **Hierarchische Rechtevererbung:** Das Rechtesystem ist streng hierarchisch aufgebaut. Rechte werden von übergeordneten Rollen an untergeordnete vererbt. Administratoren können keine Rechte an Rollen vergeben, die ihrer eigenen Hierarchiestufe entsprechen oder darüber liegen.
 - **Biometrische Datenverwaltung:** Die Gesichtsdaten der Mitarbeiter werden als verschlüsselte Vektoren DSGVO-konform in der Datenbank gespeichert und ausschließlich für die Authentifizierung an PCs und Zutrittsterminals verwendet.
 
 ### 4.2. Datenbankserver
@@ -52,7 +52,7 @@ Alle KI-Modelle laufen ausschließlich auf dem internen GPU-Cluster. Es findet k
 - **Kernfunktionen:**
     - **Face-Recognition:** Hochpräzise Gesichtserkennung inklusive Liveness-Detection zur Abwehr von Spoofing-Angriffen.
     - **Dokumentenverarbeitung:** OCR- und NLP-Modelle zur automatischen Erfassung und Klassifizierung von Rechnungen, Verträgen und anderen Dokumenten.
-    - **Analyse und Forecasting:** KI-Modelle zur Analyse von Finanzdaten, zur Erstellung von Unternehmens-Forecasts und zur Erkennung von Anomalien in Netzwerkverkehr, Zutrittsprotokollen und Finanztransaktionen.
+    - **Analyse und Forecasting:** KI-Modelle zur Analyse von Finanzdaten, zur Erstellung von Unternehmens-Forecasts und zur Erkennung von Anomalien in Netzwerkverkehr, Zutritten und Finanztransaktionen.
 - **Management und MLOps:** MLflow oder Kubeflow wird zur Verwaltung des gesamten Lebenszyklus der Modelle, von der Datenvorbereitung über das Training bis hin zum Deployment und Monitoring, eingesetzt.
 - **Edge-Inference:** Für Echtzeitanwendungen wie die Liveness-Detection auf Zutrittsterminals werden quantisierte Modelle (TensorFlow Lite/ONNX) auf der Edge-Hardware ausgeführt.
 
