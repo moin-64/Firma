@@ -1,0 +1,20 @@
+# CMake
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+*.cbp
+*.kdev4
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Others
+*.log
+.DS_Store
